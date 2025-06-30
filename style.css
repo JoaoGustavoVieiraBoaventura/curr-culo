@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+  --font-family: 'Poppins', sans-serif;
+  --bg-color: linear-gradient(135deg, #79cce9, #aaffec);
+  --card-bg-color: rgba(255, 255, 255, 0.4);
+  --card-border-color: rgba(255, 255, 255, 0.6);
+  --text-color: #0c2e4e;
+  --heading-color: #005a7f;
+  --accent-color: #00a1c9;
+  --shadow-color: rgba(0, 90, 127, 0.1);
+  --icon-color: #007a9c;
+}
+
+body.dark-mode {
+  --bg-color: linear-gradient(135deg, #01041a, #0b1a3d);
+  --card-bg-color: rgba(12, 38, 77, 0.4);
+  --card-border-color: rgba(0, 191, 255, .3);
+  --text-color: #cdd8e7;
+  --heading-color: #61dafb;
+  --accent-color: #00d9ff;
+  --shadow-color: rgba(0, 217, 255, 0.15);
+  --icon-color: #61dafb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+body {
+  font-family: var(--font-family);
+  background: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  transition: background 0.5s ease, color 0.5s ease;
+  background-attachment: fixed;
+}
+
+header {
+  padding: 2rem 5%;
+  display: flex;
+  justify-content: space-bettwen;
+  align-items: center;
+  text-align: center;
+  animation: fadeIn 1s ease-out;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: var(--heading-color);
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+header p {
+  font-size: 1.1rem;
+  color: var(--text-color);
+}
+
+#theme-toggle {
+  background: var(--card-bg-color);
+  border: 1px solid var(--card-border-color);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: var(--accent-color);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px var(--shadow-color);
+}
+
+#theme-toggle:hover {
+  transform: scale(1.1) rotate(15deg);
+  box-shadow: 0 6px 20px var(--shadow-color);
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.card {
+  background: var(--card-bg-color);
+  border: 1px solid var(--card-border-color);
+  margin-bottom: 2rem;
+  padding: 2rem;
+  borer-radius: 20px;
+  box-shadow: 0 8px 32px 0 var(--shadow-color);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  animation: fadeIn 1s ease-out forwards;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px 0 var(--shadow-color);
+}
+
+section:nth-of-type(1) {
+  animation-delay: 0.2s; }
+section:nth-of-type(2) {
+  animation-delay: 0.4s }
+section:nth-of-type(3) {
+  animation-delay: 0.6s }
+section:nth-of-type(4) {
+  animation-delay: 0.8s }
+section:nth-of-type(5) {
+  animation-delay: 1.0s }
+
+h2 {
+  color: var(--heading-color);
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+h2 i {
+  color: var(--icon-color);
+}
+
+.entry {
+  margin-bottom: 1.5rem;
+}
+
+.entry:last-child {
+  margin-bottom: 0;
+}
+
+h3 {
+  color: var(--heading-color);
+  font-size: 1.2rem;
+  margin-bottom: 0.2rem;
+}
+
+.date {
+  font-style: italic;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-bottom: 0.5rem;
+}
+
+.entry small {
+  display: block;
+  margin-top: 0.5rem;
+  background-color: rgba(0,0,0,0.05);
+  padding: 8px;
+  border-radius: 8px;
+  font-style: italic;
+}
+
+.skills-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.skills-list li {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.7rem 1.2rem;
+  border-radius: 30px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.skills-list li:hover {
+  background: var(--accent-color);
+  color: white;
+  transform: scale(1.05);
+}
+
+.skills-list li i {
+  color: var(--icon-color);
+  transition: color 0.3s ease;
+}
+
+.skills-list li:hover i {
+  color: white;
+}
+
+body.dark-mode .skills-list li {
+  background: rgba(0,0,0,0.2);
+}
+
+body.dark-mode .skills-list li:hover i {
+  color: #01041a;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 2rem;
+  animation: fadeIn 1s ease-out 1.s forwards;
+  opacity: 0;
+}
+
+.social-links {
+  margin: 1rem 0;
+}
+
+.social-links a:hover {
+  color: var(--accent-color);
+  transform: scale(1.2);
+}
+
+.copyright {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
