@@ -52,7 +52,7 @@ body {
 header {
   padding: 2rem 5%;
   display: flex;
-  justify-content: space-bettwen;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
   animation: fadeIn 1s ease-out;
@@ -100,7 +100,7 @@ main {
   border: 1px solid var(--card-border-color);
   margin-bottom: 2rem;
   padding: 2rem;
-  borer-radius: 20px;
+  border-radius: 20px;
   box-shadow: 0 8px 32px 0 var(--shadow-color);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
