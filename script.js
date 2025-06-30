@@ -15,11 +15,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  const savedTheme = localStorage.getIem('theme');
+  const savedTheme = localStorage.getItem('theme');
   if (savedTheme === 'dark') {
     body.classList.add('dark-mode');
   }
-  
+
   updateIcon();
 
   themeToggle.addEventListener('click', () => {
